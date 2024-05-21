@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,50 +13,102 @@
 	<meta name="twitter:description" content="Description which will fit on all pages">
 	<meta property="og:description" content="Description which will fit on all pages" />
 
-	<meta itemprop="image" content="https://webartwork.github.io/profile/img/avatar.png">
-	<meta name="twitter:image:src" content="https://webartwork.github.io/profile/img/avatar.png">
-	<meta property="og:image" content="https://webartwork.github.io/profile/img/avatar.png" />
+	<meta itemprop="image" content="https://webartwork.github.io/wjst-default/img/avatar.png">
+	<meta name="twitter:image:src" content="https://webartwork.github.io/wjst-default/img/avatar.png">
+	<meta property="og:image" content="https://webartwork.github.io/wjst-default/img/avatar.png" />
 
-	<link rel="icon" type="image/x-icon" href="/profile/img/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/wjst-default/img/favicon.ico">
 	<meta name="keywords" content="waw, web art work, server render, template">
 
 	<base href="/">
-	<link rel="stylesheet" href="/profile/css/index.css">
-	<!-- Favicons -->
-	<link href="/profile/assets/img/favicon.png" rel="icon">
-	<link href="/profile/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-		rel="stylesheet">
-
-	<!-- Vendor CSS Files -->
-	<link href="/profile/assets/vendor/aos/aos.css" rel="stylesheet">
-	<link href="/profile/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/profile/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="/profile/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="/profile/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-	<link href="/profile/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-	<!-- Template Main CSS File -->
-	<link href="/profile/assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="/wjst-default/css/index.css">
+	<style>
+		:root {
+			--primary_color: #e0dc10;
+		}
+	</style>
 </head>
-
 <body>
-  <!-- Vendor JS Files -->
-  <script src="/profile/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/profile/assets/vendor/aos/aos.js"></script>
-  <script src="/profile/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/profile/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/profile/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/profile/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/profile/assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="/profile/assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="/profile/assets/vendor/php-email-form/validate.js"></script>
+	<div class="template">
+	<img class="template-avatar" src="/wjst-default/img/avatar.png" alt="" />
+	<div class="template-title">Welcome to WAW Template</div>
+	<div class="template-readme">
+		<div class="template-readme__title">Readme:</div>
+		<div class="template-readme__item">
+			To create new page you can type in terminal:
+			<span class="template-readme__code">waw page NAME</span>
+		</div>
+		<div class="template-readme__item">
+			You can change port in
+			<span class="template-readme__code">config.json</span>
+			of development webiste
+			<a class="template-readme__link" href="http://localhost:8000"
+				>localhost:8000</a
+			>
+		</div>
+		<div class="template-readme__item">
+			JSON in template.json is accesible over all pages
+		</div>
+		<div class="template-readme__item">
+			JSON in page.json of each page is accesible only of that specific
+			page
+		</div>
+		<div class="template-readme__item">
+			More details of how to use template you can find in
+			<a
+				class="template-readme__link"
+				href="https://webartwork.github.io/wjst/docs"
+				>Wjst Documentation</a
+			>
+		</div>
+		<div class="template-readme__item">
+			Styles: You should import each file to
+			<span class="template-readme__code">index.scss </span> located in
+			<span class="template-readme__code">css</span> folder and write SCSS
+			files in <span class="template-readme__code">css/scss</span>.
+		</div>
+	</div>
+	<div class="template-readme">
+		<div class="template-readme__title">Prefix:</div>
+		<div class="template-readme__item">
+			Prefix which we have in template.json serve as root id for the
+			template
+		</div>
+		<div class="template-readme__item">
+			For example file
+			<span class="template-readme__code">img/avatar.png</span>
+			can be served in html
+			<span class="template-readme__code"
+				>src="/wjst-default/img/avatar.png"</span
+			>
+			were our path is
+			<span class="template-readme__code">{prefix}{path}</span>
+		</div>
+		<div class="template-readme__item">
+			Prefix should be unique on project where we have more then one
+			template to serve files properly
+		</div>
+		<div class="template-readme__item">
+			To change prefix, you need simply to replace all in editor phrase
+			`/wjst-default` into new prefix `/newPrefixName`
+		</div>
+		<div class="template-readme__item">
+			To get served template by github pages, you simply have to replace
+			prefix to name of the repo and do
+			<span class="template-readme__code">waw build</span>
+			and then commit to branch which you set in settings > pages
+			<span class="template-readme__code">{repo}/settings/pages</span>
+			and after that you should able to see your wesite online, similar
+			this default repo is shown
+			<a
+				class="template-readme__link"
+				href="https://webartwork.github.io/wjst-default/"
+				>webartwork.github.io/wjst-default</a
+			>
+		</div>
+	</div>
+</div>
 
-  <!-- Template Main JS File -->
-  <script src="/profile/assets/js/main.js"></script>
+	<script src="/wjst-default/js/index.js"></script>
 </body>
-
 </html>
